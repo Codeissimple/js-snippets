@@ -28,4 +28,13 @@ switch (age){
     console.log("version 4 - " + firstName + " drinking Beer");
 }
 
+// Switch solution 2 - booleans. 
+switch (true){
+  case age < 20:
+    console.log("version 5 - " + firstName + " drinking juice");
+    break;
+  case age >= 20: 
+    console.log("version 5 - " + firstName + " drinking Beer");
+}
+
 console.log("*** end of snippet ***"); 
