@@ -1,7 +1,7 @@
 //to drink or not to drink?
 
 var firstName = "John";
-var age = 17;
+var age = 19;
 
 //ternary statement
 age < 20 ? console.log("Version 1 - " + firstName + " won't drink beer today")
@@ -17,15 +17,6 @@ if (age < 20) {
   console.log("Version 3 - " + firstName + " should drink Juice, too young to drink beer");
 } else {
   console.log("Version 3 - " +firstName + "is old enough to drink beer")
-};
-
-// Switch solution 
-switch (age){
-  case age < 20:
-    console.log("version 4 - " + firstName + " drinking juice");
-    break;
-  default: 
-    console.log("version 4 - " + firstName + " drinking Beer");
 }
 
 // Switch solution 2 - booleans. 
