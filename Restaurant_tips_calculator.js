@@ -28,14 +28,7 @@ var itemizedSpending = [];
 };
 */
 
-var cafeBill = 48;
-var bistroBill = 124;
-var restaurantBill = 268;
-
-var bill = 48;
-
-
-var itemizedSpending = [];
+var bill
 
 
 function calculateBudget(bill) {
