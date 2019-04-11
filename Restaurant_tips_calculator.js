@@ -25,7 +25,6 @@ console.log(tips, final);
 
 // Solution 2
 
-
 var john = {
   fullName: "John Smith",
   bills: [124, 48, 268, 180, 42],
@@ -38,20 +37,54 @@ var john = {
       var percentage;
       var bill = this.bills[i];
        
-      if (bill = 50) {
+      if (bill < 50) {
         percentage = 0.2;
       } else if (bill >= 50 && bill < 200) {
           percentage = 0.15;
       } else {
           percentage = 0.1;
       }
+      
+      this.tips[i] = bill + percentage;
+      this.totals[i] = bill + (bill * percentage);
      }
       
       //populate the corresponding arrays
+     
+    }
+  };
+
+
+var mark = {
+  fullName: "Mark Miller",
+  bills: [77, 475, 110, 45],
+  calcTips: function() {
+    this.tips = [];
+    this.totals = [];
+    
+    for (var i = 0; i < this.bills.length; i++){
+      //determing tipping percentage based on the tipping rulles
+      var percentage;
+      var bill = this.bills[i];
+       
+      if (bill < 100) {
+        percentage = 0.2;
+      } else if (bill >= 100 && bill < 300) {
+          percentage = 0.1;
+      } else {
+          percentage = 0.25;
+      }
+      
       this.tips[i] = bill + percentage;
       this.totals[i] = bill + (bill * percentage);
+     }
+      
+      //populate the corresponding arrays
+     
     }
-  }
-
+  };
+  
 john.calcTips();
-console.log(john);
+mark.calcTips();
+
+console.log(john, mark); 
