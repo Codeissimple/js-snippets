@@ -84,7 +84,29 @@ var mark = {
     }
   };
   
+
+function calcAverage(tips) {
+  var sum = 0;
+  for(var i =0; i < tips.length; i++){
+    sum = sum + tips[i];
+  }
+  return sum / tips.length;
+}
+  
+  
 john.calcTips();
 mark.calcTips();
 
 console.log(john, mark); 
+
+john.average = calcAverage(john.tips);
+mark.average = calcAverage(mark.tips);
+
+if(john.average > mark.average) {
+  console.log(john.fullName + "'s family gives more tips with an average of $" + john.average);
+} else if(john.average < mark.average) {
+  console.log(mark.fullName + "'s family gives more tips with an average of $" + mark.average);
+} else {
+  console.log("Both families give equal amount of tips with an average of $" + john.average);
+}
+
