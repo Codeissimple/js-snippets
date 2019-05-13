@@ -80,7 +80,7 @@ console.log(obj.city);
 change(age,obj);
 console.log(age);
 console.log(obj.city);
-*/
+
 
 var years = [1990, 1965, 1937, 2005, 1998, 2015];
 function arrayCalc(arr, fn) {
@@ -109,3 +109,57 @@ var rates = arrayCalc(ages, maxHeartRate);
 console.log(ages + " ages");
 console.log(rates + " rates");
 console.log(fullAges + " full Ages");
+
+function interviewQuestion(job) {
+  if (job === 'designer'){
+    return function(name) {
+      console.log(name + ", can you please explain, what UX design is?");
+      }
+    } else if (job === 'teacher') {
+      return function(name) {
+      console.log("What subject, do you teach, " + name + "?");
+      } 
+    } else {
+        return function(name) {
+          console.log("What do you do, " + name + "?");
+        }
+      }
+    }
+
+    var teacherQuestion = interviewQuestion('teacher');
+    var designerQuestion = interviewQuestion('designer');
+    var bossQuestion = interviewQuestion('boss');
+
+    teacherQuestion('John');
+    designerQuestion('Alex');
+    bossQuestion('Boss');
+    interviewQuestion('teacher')('Mark');
+
+var lessThanFive = [];
+var moreThanFive = [];
+
+for (var i = 0; i < 11; i++) {
+  if (i <= 5) {
+    lessThanFive.push(i);
+  } else {
+    moreThanFive.push(i);
+  }
+}
+
+console.log(lessThanFive);
+console.log(moreThanFive);
+
+*/
+function game() {
+  var score = Math.random() *10;
+  console.log((score >= 5) + ' - FUCTION DECLARATION');
+}
+game();
+
+//Immediately Invoked Function Expression (IIFE)
+
+(function(){
+  var score = Math.random() *10;
+  console.log((score >= 5) + " - instant function");
+  console.log(score);
+})();
