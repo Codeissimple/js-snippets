@@ -163,3 +163,19 @@ game();
   console.log((score >= 5) + " - instant function");
   console.log(score);
 })();
+
+
+function retirement(retirementAge){
+  var a = ' - years to retirement';
+  return function(yearOfBirth) {
+    var age = 2019 - yearOfBirth;
+    console.log((retirementAge - age) + a);
+  }
+}
+
+var retirementUS = retirement(66);
+var retirementUK = retirement(65);
+retirementUS(1990);
+retirement(66)(1990);
+retirementUK(1970);
+retirement(65)(1970);
